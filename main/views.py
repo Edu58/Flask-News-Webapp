@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request
+from flask import render_template, redirect, request, url_for
 from . import main
 from app import requests
 from .search import MyForm
@@ -28,9 +28,12 @@ def search():
         if form.validate_on_submit():
             search_term = form.data.get('keyword')
             search_responses = requests.search_keyword(search_term)
-            return render_template('search.html', form=form, response=search_responses)
+            if search_responses:
+                return render_template('search.html', form=form, response=search_responses)
+            else:
+                return render_template('404.html'), 404
         else:
-            return "No results"
+            return None
 
     return render_template('search.html', form=form)
 

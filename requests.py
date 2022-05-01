@@ -1,6 +1,7 @@
 import json
 import urllib.request
 from .models import NewsSource, News
+from flask import redirect, url_for
 
 api_key = None
 base_url = None
@@ -29,7 +30,7 @@ def get_all_sources():
             sources_results_list = response['sources']
             sources_results = process_news_sources(sources_results_list)
         else:
-            return 'No results found'
+            return redirect(url_for('not_found'))
 
     return sources_results
 
@@ -63,7 +64,7 @@ def get_news(movie_id):
             news_list = load_json['articles']
             news_results = process_one_news(news_list)
         else:
-            return 'No news found'
+            return redirect(url_for('not_found'))
 
     return news_results
 
@@ -82,7 +83,7 @@ def search_keyword(keyword):
             articles_list = load_json['articles']
             search_results = process_one_news(articles_list)
         else:
-            return 'No result'
+            return redirect(url_for('not_found'))
 
     return search_results
 

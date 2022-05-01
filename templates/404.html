@@ -4,8 +4,11 @@
 
 <div class="text-center">
     <h1>Sorry! The page or content you're looking for is not available</h1>
-<button type="button" class="btn btn-info">
+<button type="button" class="btn btn-info text-white">
     <a href="{{ url_for('main.index') }}">Back</a>
+</button>
+    <button type="button" class="btn btn-info">
+    <a href="{{ url_for('main.search') }}" class="text-light">Search</a>
 </button>
 </div>
 
