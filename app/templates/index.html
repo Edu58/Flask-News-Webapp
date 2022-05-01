@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block title %} E-News {% endblock %}
+
+{% block content %}
+    {% if sources %}
+
+        <h2 class="text-center">Top Sources</h2>
+
+        <div class="container">
+            {{ macro.displayList(sources) }}
+        </div>
+    {% endif %}
+{% endblock %}
