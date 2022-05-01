@@ -1,10 +1,9 @@
 class NewsSource:
 
-    def __init__(self, id, name, description, url):
+    def __init__(self, id, name, description):
         self.id = id
         self.name = name
         self.description = description
-        self.url = url
 
 
 class News:
