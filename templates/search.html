@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
 {% block content %}
 <div class="container">
@@ -12,6 +13,6 @@
         </form>
     </div>
 
-     {{ macro.displayNews(responses) }}
+     {{ macro.displayNews(response) }}
 </div>
 {% endblock %}

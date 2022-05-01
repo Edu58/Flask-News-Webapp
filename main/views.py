@@ -21,7 +21,7 @@ def one_source(movie_id):
 
 
 @main.route('/search', methods=['GET', 'POST'])
-def submit():
+def search():
     form = MyForm()
 
     if request.method == "POST":
