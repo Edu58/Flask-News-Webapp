@@ -8,8 +8,10 @@ class NewsSource:
 
 class News:
 
-    def __init__(self, image, description, time, url):
+    def __init__(self, author, image, title, description, time, url):
+        self.author = author
         self.image = image
+        self.title = title
         self.description = description
         self.time = time
         self.url = url

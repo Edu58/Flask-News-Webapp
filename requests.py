@@ -71,12 +71,14 @@ def process_one_news(news_list):
     modelled_news = []
 
     for news in news_list:
-        image = news.image
+        author = news.author
+        image = news.urlToImage
+        title = news.title
         description = news.description
-        time = news.time
+        time = news.publishedAt
         url = news.url
 
-        new_news_object = News(image, description, time, url)
+        new_news_object = News(author, image, title, description, time, url)
         modelled_news.append(new_news_object)
 
     return modelled_news
