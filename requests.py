@@ -47,13 +47,13 @@ def process_news_sources(sources):
     return modelled_data
 
 
-def get_news(id):
+def get_news(movie_id):
 
-    one_source_url = one_source.format(id, api_key)
+    one_source_url = one_source.format(movie_id, api_key)
 
     with urllib.request.urlopen(one_source_url) as url:
         data = url.read()
-        load_json = data.loads(data)
+        load_json = json.loads(data)
 
         news_results = None
 
@@ -71,12 +71,12 @@ def process_one_news(news_list):
     modelled_news = []
 
     for news in news_list:
-        author = news.author
-        image = news.urlToImage
-        title = news.title
-        description = news.description
-        time = news.publishedAt
-        url = news.url
+        author = news['author']
+        image = news['urlToImage']
+        title = news['title']
+        description = news['description']
+        time = news['publishedAt']
+        url = news['url']
 
         new_news_object = News(author, image, title, description, time, url)
         modelled_news.append(new_news_object)

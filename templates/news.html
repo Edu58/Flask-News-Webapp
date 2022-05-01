@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
-{% extends 'macro.html' as macro %}
+{% import 'macros.html' as macro %}
 
 {% block content %}
-<div class="container">
-    {{ macro.displayNews(news) }}
-</div>
+    {% if news %}
+        <div class="container">
+            {{ macro.displayNews(news) }}
+        </div>
+    {% endif %}
 {% endblock %}

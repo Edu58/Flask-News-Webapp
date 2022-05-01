@@ -6,7 +6,7 @@
         <div class="caption">
           <h3>{{ item.name }}</h3>
           <p>{{ item.description }}</p>
-          <p><a href="{{ url_for('one_source', id=item.id) }}" class="btn btn-primary" role="button">visit</a></p>
+          <p><a href="{{ url_for('main.one_source', movie_id=item.id) }}" class="btn btn-primary" role="button">visit</a></p>
         </div>
       </div>
     </div>
@@ -24,8 +24,8 @@
       <div class="thumbnail">
            <img src="{{news.image}}" alt="{{ news.title }}">
         <div class="caption">
-          <p>{{ item.description }}</p>
-          <p><a href="{{ news.url }}" class="btn btn-primary" role="button">visit</a></p>
+          <p>{{ news.description }}</p>
+          <p><a href="{{ news.url }}" class="btn btn-primary" target="_blank" role="button">visit</a></p>
         </div>
       </div>
     </div>

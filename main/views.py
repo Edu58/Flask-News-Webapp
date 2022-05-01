@@ -11,9 +11,9 @@ def index():
     return render_template('index.html', sources=all_sources)
 
 
-@main.route('/<str:id>')
-def one_source(id):
+@main.route('/<movie_id>')
+def one_source(movie_id):
 
-    news_from_selected_choice = requests.get_news(id)
+    news_from_selected_choice = requests.get_news(movie_id)
 
     return render_template('news.html', news=news_from_selected_choice)
