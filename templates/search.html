@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="container">
-    <div class="row text-center">
-        <form method="POST" class="form-inline" role="form">
+    <div class="text-center">
+        <form method="POST" class="form-inline text-cente" role="form">
             <div class="form-group">
                 {{ form.csrf_token }}
                 {{ form.keyword.label }} {{ form.keyword(size=20,class="form-control input-lg", placeholder="e.g. Trump, Apple, UKraine") }}

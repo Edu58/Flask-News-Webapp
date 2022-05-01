@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1>Sorry! The page or content you're looking for is not available</h1>
+<button type="button" class="btn btn-info">
+    <a href="{{ url_for('main.index') }}">Back</a>
+</button>
+</div>
+
+
+{% endblock %}

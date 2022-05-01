@@ -33,3 +33,13 @@ def search():
             return "No results"
 
     return render_template('search.html', form=form)
+
+
+@main.errorhandler(404)
+def not_found(e):
+    return render_template('404.html'), 404
+
+
+@main.errorhandler(500)
+def not_found(e):
+    return render_template('500.html'), 500
