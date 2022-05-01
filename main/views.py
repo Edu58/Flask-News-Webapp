@@ -1,4 +1,4 @@
-from flask import render_template, redirect
+from flask import render_template, redirect, request
 from . import main
 from app import requests
 from .search import MyForm
@@ -23,6 +23,8 @@ def one_source(movie_id):
 @main.route('/search', methods=['GET', 'POST'])
 def submit():
     form = MyForm()
-    if form.validate_on_submit():
-        return redirect('/success')
+
+    if request.method == "POST":
+        if form.validate_on_submit():
+            return "HELLO"
     return render_template('search.html', form=form)
