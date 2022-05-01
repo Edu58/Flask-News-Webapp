@@ -1,8 +1,10 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 from config import config_option
 
 bootstrap = Bootstrap()
+moment = Moment()
 
 
 def create_app(config_name):
@@ -10,6 +12,7 @@ def create_app(config_name):
     app.config.from_object(config_option[config_name])
     app.config.from_pyfile('api_config.py')
     bootstrap.init_app(app)
+    moment.init_app(app)
 
     from .main import main
     app.register_blueprint(main)

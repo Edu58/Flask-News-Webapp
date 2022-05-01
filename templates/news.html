@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro %}
+{% import 'macros.html' as macro with context %}
+
+{% block title %} E-News {% endblock %}
 
 {% block content %}
     {% if news %}
