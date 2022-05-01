@@ -6,10 +6,12 @@
         <form method="POST" class="form-inline" role="form">
             <div class="form-group">
                 {{ form.csrf_token }}
-                {{ form.name.label }} {{ form.name(size=20,class="form-control input-lg", placeholder="e.g. Trump, Apple, UKraine") }}
+                {{ form.keyword.label }} {{ form.keyword(size=20,class="form-control input-lg", placeholder="e.g. Trump, Apple, UKraine") }}
             </div>
             <input type="submit" value="search" class="btn btn-primary btn-lg">
         </form>
     </div>
+
+     {{ macro.displayNews(responses) }}
 </div>
 {% endblock %}

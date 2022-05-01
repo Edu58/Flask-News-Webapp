@@ -26,5 +26,10 @@ def submit():
 
     if request.method == "POST":
         if form.validate_on_submit():
-            return "HELLO"
+            search_term = form.data.get('keyword')
+            search_responses = requests.search_keyword(search_term)
+            return render_template('search.html', form=form, response=search_responses)
+        else:
+            return "No results"
+
     return render_template('search.html', form=form)
