@@ -14,6 +14,6 @@ def index():
 @main.route('/<str:id>')
 def one_source(id):
 
+    news_from_selected_choice = requests.get_news(id)
 
-
-    return render_template('news.html')
+    return render_template('news.html', news=news_from_selected_choice)
