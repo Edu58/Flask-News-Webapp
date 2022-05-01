@@ -13,9 +13,13 @@
 - [Authors Info](#author-info)
 
 ## Description
-![Project Image](static/images/home.png)
-
-This is a news website made with Flask and the News API. The webapp solely relies on the News API for data and only offers a few headlines with links to the original source of the news. On loading, the user is shown a list of news sources from which they can choose from. After selecting a source, thery are redirected to a page with top healines from that source. If the user wants more info, they can click on the visit button to read more on the article on the sources website. As for the UI, it is made possible with the flask-bootstrap extension which integrates bootstrap 3 into flask apps offering a more responsive design.
+![Home](static/images/news1.png)
+<br>
+<br>
+This is a news website made with Flask and the [News API](https://newsapi.org/). The webapp solely relies on the News API for data and only offers a few headlines with links to the original source of the news. On loading, the user is shown a list of news sources from which they can choose from. After selecting a source, thery are redirected to a page with top healines from that source. If the user wants more info, they can click on the visit button to read more on the article on the sources website. As for the UI, it is made possible with the flask-bootstrap extension which integrates bootstrap 3 into flask apps offering a more responsive design.
+<br>
+<br>
+![Home](static/images/news2.png)
 
 ## Behaviour Driven Development
 
