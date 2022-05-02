@@ -55,7 +55,7 @@ git clone git@github.com:Edu58/Flask-News-Webapp.git
 When you run the commands successfully, you should have a local version of this repository.
 
 ### Usage
-
+To run the app, unzip the cloned folder if it is zipped. Navigate inside the folder and run ```python manage.py runserver``` or ```python manage.py server```. Any of these 2 should start the server at localhost:5000. Once the server is runnning, open your browser and enter localhost:5000 in your url bar of your preferred browser, and you should be able to use the app now. This will only work on the computer running the server. It is not available to anyone else. If you want to show the app to anyone else, you can share the live link --> [flask-enews.herokuapp.com/](https://flask-enews.herokuapp.com/).
 
 ### 2. Online Repository
 
