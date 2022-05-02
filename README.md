@@ -69,6 +69,7 @@ Feel free to fork the project and have fun with it. Happy coding!
 - Flask
 - Flask-Bootstrap
 - Flask-Script
+- News API
 
 ## Licence
 
